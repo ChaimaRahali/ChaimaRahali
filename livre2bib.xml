@@ -1,0 +1,40 @@
+<?xml  vresion="1.0"?>
+<livre titre="">
+<auteur nom="" prenom="" />
+<sections>
+<section titre="Section 1">
+<chapitres>
+<chapitre titre="Chaitre 1">
+<paragraphes>
+<paragraphe>&elt;element id="10"&gt;&amp;&lt;/element&gt;</paragraphe>
+<paragraphe><![CDATA[<element id="10">&gt;</element>]]></paragraphe>
+
+</paragraphes>
+</chapitre>
+<chapitre titre="Chaitre 2">
+<paragraphes>
+<paragraphe>&elt;element id="10"&gt;&amp;&lt;/element&gt;</paragraphe>
+<paragraphe><![CDATA[<element id="10">&gt;</element>]]></paragraphe>
+</paragraphes>
+</chapitre>
+</chapitres>
+</section>
+
+<section titre="Section 2">
+<chapitres>
+<chapitre titre="Chaitre 1">
+<paragraphes>
+<paragraphe>&elt;element id="10"&gt;&amp;&lt;/element&gt;</paragraphe>
+<paragraphe><![CDATA[<element id="10">&gt;</element>]]></paragraphe>
+</paragraphes>
+</chapitre>
+<chapitre titre="Chaitre 2">
+<paragraphes>
+<paragraphe>&elt;element id="10"&gt;&amp;&lt;/element&gt;</paragraphe>
+<paragraphe><![CDATA[<element id="10">&gt;</element>]]></paragraphe>
+</paragraphes>
+</chapitre>
+</chapitres>
+</section>
+</sections>
+</livre>

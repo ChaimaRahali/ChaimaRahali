@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XLMSchema">
+<xs:complexeType name="numerosType">
+<xs:sequence>
+<xs:element name="contact" type="contactType" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexeType>
+
+<xs:complesType name="contactType">
+<xs:sequence>
+<xs:element name="nom" type="xs:string"/>
+<xs:element name="prenom" type="xs:string"/>
+<xs:element name="telephone" type="xs:string" minOccurs="0"/>
+<xs:element name="email" type="xs:string" maxOccurs="unbounded"/>
+
+</xs:sequence>
+<xs:attribute name="titre" type="xs:string" use="required"/>
+<xs:attribute name="techno" type="xs:string" use="optionnal"/>
+
+</xs:complesType>
+<xs:element name="numerous" type="numerosType"/>
+</xs:schema>

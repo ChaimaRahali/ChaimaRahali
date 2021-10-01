@@ -1,0 +1,41 @@
+<?xml  vresion="1.0"?>
+<livre titre="">
+<auteur nom="" prenom="" />
+<sections>
+<section titre="Section 1">
+<chapitres>
+<chapitre titre="Chaitre 1">
+<paragraphes>
+<paragraphe>Premier paragraphe</paragraphe>
+<paragraphe>Deuxieme paragraphe</paragraphe>
+
+</paragraphes>
+</chapitre>
+<chapitre titre="Chaitre 2">
+<paragraphes>
+<paragraphe>Premier paragraphe</paragraphe>
+<paragraphe>Deuxieme paragraphe</paragraphe>
+</paragraphes>
+</chapitre>
+</chapitres>
+</section>
+
+<section titre="Section 2">
+<chapitres>
+<chapitre titre="Chaitre 1">
+<paragraphes>
+<paragraphe>Premier paragraphe</paragraphe>
+<paragraphe>Deuxieme paragraphe</paragraphe>
+
+</paragraphes>
+</chapitre>
+<chapitre titre="Chaitre 2">
+<paragraphes>
+<paragraphe>Premier paragraphe</paragraphe>
+<paragraphe>Deuxieme paragraphe</paragraphe>
+</paragraphes>
+</chapitre>
+</chapitres>
+</section>
+</sections>
+</livre>
