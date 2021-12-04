@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project id="ec48bd4b-8473-47c7-8341-1dca549f24f7" activeEnvironment="Default" name="server" soapui-version="5.6.0" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:interface xsi:type="con:WsdlInterface" id="e2cd819b-4fb7-42e8-9c48-d5e87448d5f2" wsaVersion="NONE" name="calculurn:calculBinding" type="wsdl" bindingName="{http://localhost/soap/calculurn:calcul}calculurn:calculBinding" soapVersion="1_1" anonymous="optional" definition="http://localhost/SOC/WS1/server.php?wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="http://localhost/SOC/WS1/server.php?wsdl"><con:part><con:url>http://localhost/SOC/WS1/server.php?wsdl</con:url><con:content><![CDATA[<definitions targetNamespace="http://localhost/soap/calculurn:calcul" xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tns="http://localhost/soap/calculurn:calcul" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <xsd:schema targetNamespace="http://localhost/soap/calculurn:calcul">
+      <xsd:import namespace="http://schemas.xmlsoap.org/soap/encoding/"/>
+      <xsd:import namespace="http://schemas.xmlsoap.org/wsdl/"/>
+      <xsd:complexType name="Book">
+        <xsd:all>
+          <xsd:element name="Book_Name" type="xsd:string"/>
+          <xsd:element name="Langue" type="xsd:string"/>
+        </xsd:all>
+      </xsd:complexType>
+    </xsd:schema>
+  </types>
+  <message name="priceRequest">
+    <part name="name" type="xsd:string"/>
+  </message>
+  <message name="priceResponse">
+    <part name="return" type="xsd:int"/>
+  </message>
+  <message name="getInfoRequest">
+    <part name="name" type="xsd:string"/>
+  </message>
+  <message name="getInfoResponse">
+    <part name="returnInformation" type="xsd:string"/>
+  </message>
+  <portType name="calculurn:calculPortType">
+    <operation name="price">
+      <input message="tns:priceRequest"/>
+      <output message="tns:priceResponse"/>
+    </operation>
+    <operation name="getInfo">
+      <input message="tns:getInfoRequest"/>
+      <output message="tns:getInfoResponse"/>
+    </operation>
+  </portType>
+  <binding name="calculurn:calculBinding" type="tns:calculurn:calculPortType">
+    <soap:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <operation name="price">
+      <soap:operation soapAction="http://localhost/SOC/WS1/server.php/price" style="rpc"/>
+      <input>
+        <soap:body use="encoded" namespace="" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </input>
+      <output>
+        <soap:body use="encoded" namespace="" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </output>
+    </operation>
+    <operation name="getInfo">
+      <soap:operation soapAction="http://localhost/SOC/WS1/server.php/getInfo" style="rpc"/>
+      <input>
+        <soap:body use="encoded" namespace="" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </input>
+      <output>
+        <soap:body use="encoded" namespace="" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </output>
+    </operation>
+  </binding>
+  <service name="calculurn:calcul">
+    <port name="calculurn:calculPort" binding="tns:calculurn:calculBinding">
+      <soap:address location="http://localhost/SOC/WS1/server.php"/>
+    </port>
+  </service>
+</definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>http://localhost/SOC/WS1/server.php</con:endpoint></con:endpoints><con:operation id="46908deb-44d5-45ab-ad2c-80e5f6762e26" isOneWay="false" action="http://localhost/SOC/WS1/server.php/getInfo" name="getInfo" bindingOperationName="getInfo" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="a08dcea5-c9aa-434f-8e3f-19b3c605f028" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost/SOC/WS1/server.php</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <getInfo soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">\r
+         <name xsi:type="xsd:string">?</name>\r
+      </getInfo>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://localhost/SOC/WS1/server.php/getInfo"/></con:call></con:operation><con:operation id="77f90229-5129-457d-93a5-9008cc3d5611" isOneWay="false" action="http://localhost/SOC/WS1/server.php/price" name="price" bindingOperationName="price" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="97a0bdb4-878d-4162-8b6f-800a732102d2" name="Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost/SOC/WS1/server.php</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <price soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">\r
+         <name xsi:type="xsd:string">abc</name>\r
+      </price>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://localhost/SOC/WS1/server.php/price"/><con:wsrmConfig version="1.2"/></con:call></con:operation></con:interface><con:properties/><con:wssContainer/><con:oAuth2ProfileContainer/><con:oAuth1ProfileContainer/></con:soapui-project>
